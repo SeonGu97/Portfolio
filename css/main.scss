@@ -29,6 +29,12 @@ html {
             main {
                 @include full-size;
             }
+
+            aside {
+                width: 250px;
+                height: $full;
+                flex: none;
+            }
         }
     }
 }
