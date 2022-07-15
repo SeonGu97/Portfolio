@@ -1,0 +1,30 @@
+// import
+@import 'reset';
+
+// var
+$full: 100%;
+$primary-size: 1rem;
+
+// mixin
+@mixin full-size {
+    width: $full;
+    height: $full;
+}
+
+// code
+html {
+    @include full-size;
+
+    body {
+        display: flex;
+        @include full-size;
+        justify-content: center;
+
+        #app {
+            display: flex;
+            max-width: 1200px;
+            @include full-size;
+            margin: 0 $primary-size;;
+        }
+    }
+}
