@@ -2,6 +2,6 @@
 
 export default class Main {
     constructor(Creator, app) {
-        this.main = new Creator('main', 'main', [''], [''], '', 1, app, false, '', '');
+        this.main = new Creator('main', 'main', ['class'], ['tb-pd bs'], '', 1, app, false, '', '');
     }
 }

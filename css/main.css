@@ -80,4 +80,12 @@ html body #app aside {
 
 .mg-lr {
   margin: 0 1rem;
+}
+
+.tb-pd {
+  padding: 1rem 0;
+}
+
+.bs {
+  box-sizing: border-box;
 }/*# sourceMappingURL=main.css.map */
