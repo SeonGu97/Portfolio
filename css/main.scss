@@ -24,7 +24,6 @@ html {
             display: flex;
             max-width: 1200px;
             @include full-size;
-            margin: 0 $primary-size;
 
             main {
                 @include full-size;
@@ -37,4 +36,8 @@ html {
             }
         }
     }
+}
+
+.mg-lr {
+    margin: 0 $primary-size;
 }

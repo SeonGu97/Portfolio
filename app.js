@@ -6,7 +6,7 @@ import Main from "./js/main/main.js";
 
 export default class App {
     constructor() {
-        this.app = new Creator('app', 'div', ['id'], ['app'], '', 1, document.body, false, '', '');
+        this.app = new Creator('app', 'div', ['id','class'], ['app', 'mg-lr'], '', 1, document.body, false, '', '');
 
         this.aside = new Aside(Creator, this.app.name);
         this.main = new Main(Creator, this.app.name);

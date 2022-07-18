@@ -48,7 +48,7 @@ export default class Creator {
 
     set type(result) {
         this._type = typeof result == 'object' ? result : new Array(result);
-        this._type = this._type[0].split(' ');
+        // this._type = this._type[0].split(' ');
         this._type == '' ? this._type.length = 0 : this._type;
     }
 
