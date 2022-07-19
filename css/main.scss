@@ -1,9 +1,15 @@
 // import
 @import 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap');
 
 // var
 $full: 100%;
 $primary-size: 1rem;
+$primary-dark-color: #333536;
+$primary-white-color: #E2F3F6;
+$gray-1: #6F7475;
+$gray-2: #ACB4B5;
+$gray-3: #C9D2D4;
 
 // mixin
 @mixin full-size {
@@ -19,6 +25,9 @@ html {
         display: flex;
         @include full-size;
         justify-content: center;
+        font-family: 'Noto Sans KR', sans-serif;
+        color: $primary-dark-color;
+        background: #E9F4F6;
 
         #app {
             display: flex;
@@ -33,6 +42,12 @@ html {
                 width: 250px;
                 height: $full;
                 flex: none;
+
+                .day {
+                    display: flex;
+                    justify-content: center;
+                    font-size: 1.25rem;
+                }
             }
         }
     }
@@ -42,7 +57,7 @@ html {
     margin: 0 $primary-size;
 }
 
-.tb-pd {
+.pd-tb {
     padding: $primary-size 0;
 }
 
