@@ -39,14 +39,83 @@ html {
             }
 
             aside {
+                display: flex;
                 width: 250px;
                 height: $full;
+                flex-direction: column;
+                align-items: center;
                 flex: none;
 
                 .day {
                     display: flex;
                     justify-content: center;
                     font-size: 1.25rem;
+                }
+
+                .analog {
+                    width: 10rem;
+                    height: 10rem;
+                    background: $primary-dark-color;
+                    border-radius: 50%;
+                    border: .25rem solid $primary-dark-color;
+                    position: relative;
+
+                    @mixin clock_hand {
+                        position: absolute;
+                        left: 50%;
+                        bottom: 50%;
+                        transform: translateX(-50%);
+                        transform-origin: bottom;
+                        border-radius: 50%;
+                        --rotation: 0;
+                        transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+                    }
+
+                    .hh {
+                        width: 3px;
+                        height: 25%;
+                        background: brown;
+                        @include clock_hand;
+                        z-index: 3;
+                    }
+
+                    .mh {
+                        width: 2px;
+                        height: 37.5%;
+                        background: $gray-1;
+                        @include clock_hand;
+                        z-index: 2;
+                    }
+
+                    .sh {
+                        width: 1px;
+                        height: 45%;
+                        background: $primary-white-color;
+                        @include clock_hand;
+                        z-index: 1;
+                    }
+
+                    .number {
+                        display: flex;
+                        @include full-size;
+                        justify-content: center;
+                        font-size: $primary-size / 2;
+                        color: $primary-white-color;
+                        position: absolute;
+                    }
+
+                    &::after {
+                        content: '';
+                        width: .25rem;
+                        height: .25rem;
+                        border-radius: 50%;
+                        background: $primary-white-color;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: 4;
+                    }
                 }
 
                 .clock {

@@ -2,7 +2,7 @@
 
 export default class Clock {
     constructor(Creator, aside) {
-        this.clock = new Creator('clock', 'div', ['class'], ['clock'], '', 1, aside, false, '', '');
+        this.clock = new Creator('clock', 'div', ['class'], ['clock pd-tb'], '', 1, aside, false, '', '');
 
         setInterval(() => {
             this.date = new Date();

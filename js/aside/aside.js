@@ -1,6 +1,7 @@
 'use strict';
 
 import Day from "./day.js";
+import Analog from "./analog.js";
 import Clock from "./clock.js";
 
 export default class Aside {
@@ -8,6 +9,7 @@ export default class Aside {
         this.aside = new Creator('aside', 'aside', ['class'], ['pd-tb bs'], '', 1, app, false, '', '');
     
         this.day = new Day(Creator, this.aside.name);
+        this.analog = new Analog(Creator, this.aside.name);
         this.clock = new Clock(Creator, this.aside.name);
     }
 }

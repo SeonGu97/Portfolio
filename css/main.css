@@ -77,14 +77,88 @@ html body #app main {
   height: 100%;
 }
 html body #app aside {
+  display: flex;
   width: 250px;
   height: 100%;
+  flex-direction: column;
+  align-items: center;
   flex: none;
 }
 html body #app aside .day {
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
+}
+html body #app aside .analog {
+  width: 10rem;
+  height: 10rem;
+  background: #333536;
+  border-radius: 50%;
+  border: 0.25rem solid #333536;
+  position: relative;
+}
+html body #app aside .analog .hh {
+  width: 3px;
+  height: 25%;
+  background: brown;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  border-radius: 50%;
+  --rotation: 0;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 3;
+}
+html body #app aside .analog .mh {
+  width: 2px;
+  height: 37.5%;
+  background: #6F7475;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  border-radius: 50%;
+  --rotation: 0;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 2;
+}
+html body #app aside .analog .sh {
+  width: 1px;
+  height: 45%;
+  background: #E2F3F6;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform: translateX(-50%);
+  transform-origin: bottom;
+  border-radius: 50%;
+  --rotation: 0;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+  z-index: 1;
+}
+html body #app aside .analog .number {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  font-size: 0.5rem;
+  color: #E2F3F6;
+  position: absolute;
+}
+html body #app aside .analog::after {
+  content: "";
+  width: 0.25rem;
+  height: 0.25rem;
+  border-radius: 50%;
+  background: #E2F3F6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
 }
 html body #app aside .clock {
   display: flex;
