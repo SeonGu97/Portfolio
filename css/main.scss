@@ -36,6 +36,38 @@ html {
 
             main {
                 @include full-size;
+
+                header {
+
+                    .dark_mod {
+                        display: flex;
+                        width: 3.5rem;
+                        height: 1.75rem;
+                        align-items: center;
+                        background: $gray-3;
+                        border-radius: 1rem;
+                        padding: 0 $primary-size / 4;
+                        pointer-events: none;
+                        position: relative;
+
+                        .mod_icon {
+                            font-size: 1.15rem;
+                            padding-bottom: 2px;
+                            pointer-events: auto;
+                            cursor: pointer;
+                            position: absolute;
+                            transition: all .25s ease;
+                        }
+                    }
+
+                    .mod_bg {
+                        background: $gray-2;
+                    }
+
+                    .mod_change {
+                        transform: translateX(100%);
+                    }
+                }
             }
 
             aside {
@@ -125,6 +157,11 @@ html {
                 }
             }
         }
+    }
+
+    .dark {
+        background: $primary-dark-color;
+        color: $primary-white-color;
     }
 }
 

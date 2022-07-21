@@ -76,6 +76,31 @@ html body #app main {
   width: 100%;
   height: 100%;
 }
+html body #app main header .dark_mod {
+  display: flex;
+  width: 3.5rem;
+  height: 1.75rem;
+  align-items: center;
+  background: #C9D2D4;
+  border-radius: 1rem;
+  padding: 0 0.25rem;
+  pointer-events: none;
+  position: relative;
+}
+html body #app main header .dark_mod .mod_icon {
+  font-size: 1.15rem;
+  padding-bottom: 2px;
+  pointer-events: auto;
+  cursor: pointer;
+  position: absolute;
+  transition: all 0.25s ease;
+}
+html body #app main header .mod_bg {
+  background: #ACB4B5;
+}
+html body #app main header .mod_change {
+  transform: translateX(100%);
+}
 html body #app aside {
   display: flex;
   width: 250px;
@@ -164,6 +189,10 @@ html body #app aside .clock {
   display: flex;
   justify-content: center;
   font-size: 1rem;
+}
+html .dark {
+  background: #333536;
+  color: #E2F3F6;
 }
 
 .mg-lr {
