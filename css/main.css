@@ -63,8 +63,12 @@ html body {
   height: 100%;
   justify-content: center;
   font-family: "Noto Sans KR", sans-serif;
-  color: #333536;
-  background: #E9F4F6;
+  color: #212121;
+  background: #e3f2fd;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 html body #app {
   display: flex;
@@ -81,7 +85,8 @@ html body #app main header .dark_mod {
   width: 3.5rem;
   height: 1.75rem;
   align-items: center;
-  background: #C9D2D4;
+  background: #fff;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #fafafa;
   border-radius: 1rem;
   padding: 0 0.25rem;
   pointer-events: none;
@@ -95,9 +100,6 @@ html body #app main header .dark_mod .mod_icon {
   position: absolute;
   transition: all 0.25s ease;
 }
-html body #app main header .mod_bg {
-  background: #ACB4B5;
-}
 html body #app main header .mod_change {
   transform: translateX(100%);
 }
@@ -108,19 +110,23 @@ html body #app aside {
   flex-direction: column;
   align-items: center;
   flex: none;
+  row-gap: 1rem;
 }
 html body #app aside .day {
   display: flex;
   justify-content: center;
   font-size: 1.25rem;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #fafafa;
+  background: #fafafa;
+  border-radius: 1rem;
 }
 html body #app aside .analog {
   width: 10rem;
   height: 10rem;
-  background: #333536;
+  background: #fafafa;
   border-radius: 50%;
-  border: 0.25rem solid #333536;
   position: relative;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #fafafa;
 }
 html body #app aside .analog .hh {
   width: 3px;
@@ -139,7 +145,7 @@ html body #app aside .analog .hh {
 html body #app aside .analog .mh {
   width: 2px;
   height: 37.5%;
-  background: #6F7475;
+  background: #404040;
   position: absolute;
   left: 50%;
   bottom: 50%;
@@ -153,7 +159,7 @@ html body #app aside .analog .mh {
 html body #app aside .analog .sh {
   width: 1px;
   height: 45%;
-  background: #E2F3F6;
+  background: #c8d0e7;
   position: absolute;
   left: 50%;
   bottom: 50%;
@@ -170,7 +176,7 @@ html body #app aside .analog .number {
   height: 100%;
   justify-content: center;
   font-size: 0.5rem;
-  color: #E2F3F6;
+  color: #212121;
   position: absolute;
 }
 html body #app aside .analog::after {
@@ -178,7 +184,7 @@ html body #app aside .analog::after {
   width: 0.25rem;
   height: 0.25rem;
   border-radius: 50%;
-  background: #E2F3F6;
+  background: #404040;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -189,20 +195,31 @@ html body #app aside .clock {
   display: flex;
   justify-content: center;
   font-size: 1rem;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem #c8d0e7, inset -0.2rem -0.2rem 0.5rem #fafafa;
+  background: #fafafa;
+  border-radius: 1rem;
 }
-html .dark {
-  background: #333536;
-  color: #E2F3F6;
+html .d__1 {
+  background: #212121;
+  color: #fafafa;
 }
-
 .mg-lr {
   margin: 0 1rem;
 }
 
 .pd-tb {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
+}
+
+.pd-lr {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .bs {
   box-sizing: border-box;
+}
+
+.bd_r {
+  border-radius: 2rem;
 }/*# sourceMappingURL=main.css.map */

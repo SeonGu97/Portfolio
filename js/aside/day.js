@@ -2,7 +2,7 @@
 
 export default class Day {
     constructor(Creator, aside) {
-        this.day = new Creator('day', 'div', ['class'], ['day pd-tb'], '', 1, aside, false, '', '');
+        this.day = new Creator('day', 'div', ['class'], ['day pd-tb pd-lr bd_r'], '', 1, aside, false, '', '');
     
         this.date = new Date();
         this.y = this.date.getFullYear();

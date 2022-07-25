@@ -17,18 +17,18 @@ export default class Dark_mod {
         this.target.parentElement.classList.toggle('mod_bg');
         this.target.classList.toggle('mod_change');
 
-        document.body.classList.toggle('dark');
-
         this.icon = ['🌝', '🌚'];
 
         this.analog = document.querySelector('.analog');
 
         if(this.target.classList.contains('mod_change')) {
             this.target.innerHTML = this.icon[1];
-            this.analog.style.borderColor = '#E2F3F6';
         }else {
             this.target.innerHTML = this.icon[0];
-            this.analog.style.borderColor = '#333536';
         }
+
+        document.body.classList.toggle('dark');
+
+        this.analog = document.querySelector('.analog');
     }
 }

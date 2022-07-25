@@ -5,11 +5,17 @@
 // var
 $full: 100%;
 $primary-size: 1rem;
-$primary-dark-color: #333536;
-$primary-white-color: #E2F3F6;
-$gray-1: #6F7475;
-$gray-2: #ACB4B5;
+$primary-dark-color: #212121;
+$primary-white-color: #fafafa;
+$primary-light: #8abdff;
+$gray-1: #404040;
+$gray-2: #c8d0e7;
 $gray-3: #C9D2D4;
+$gray-4: #E9F4F6;
+$shadow: .3rem .3rem .6rem $gray-2, 
+-.2rem -.2rem .5rem $primary-white-color;
+$inner-shadow: inset .2rem .2rem .5rem $gray-2, 
+inset -.2rem -.2rem .5rem $primary-white-color;
 
 // mixin
 @mixin full-size {
@@ -27,7 +33,12 @@ html {
         justify-content: center;
         font-family: 'Noto Sans KR', sans-serif;
         color: $primary-dark-color;
-        background: #E9F4F6;
+        background: #e3f2fd;
+        
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
 
         #app {
             display: flex;
@@ -44,7 +55,8 @@ html {
                         width: 3.5rem;
                         height: 1.75rem;
                         align-items: center;
-                        background: $gray-3;
+                        background: #fff;
+                        box-shadow: $inner-shadow;
                         border-radius: 1rem;
                         padding: 0 $primary-size / 4;
                         pointer-events: none;
@@ -61,7 +73,7 @@ html {
                     }
 
                     .mod_bg {
-                        background: $gray-2;
+                        
                     }
 
                     .mod_change {
@@ -77,20 +89,24 @@ html {
                 flex-direction: column;
                 align-items: center;
                 flex: none;
+                row-gap: $primary-size;
 
                 .day {
                     display: flex;
                     justify-content: center;
                     font-size: 1.25rem;
+                    box-shadow: $inner-shadow;
+                    background: $primary-white-color;
+                    border-radius: $primary-size;
                 }
 
                 .analog {
                     width: 10rem;
                     height: 10rem;
-                    background: $primary-dark-color;
+                    background: $primary-white-color;
                     border-radius: 50%;
-                    border: .25rem solid $primary-dark-color;
                     position: relative;
+                    box-shadow: $inner-shadow;
 
                     @mixin clock_hand {
                         position: absolute;
@@ -122,7 +138,7 @@ html {
                     .sh {
                         width: 1px;
                         height: 45%;
-                        background: $primary-white-color;
+                        background: $gray-2;
                         @include clock_hand;
                         z-index: 1;
                     }
@@ -132,7 +148,7 @@ html {
                         @include full-size;
                         justify-content: center;
                         font-size: $primary-size / 2;
-                        color: $primary-white-color;
+                        color: $primary-dark-color;
                         position: absolute;
                     }
 
@@ -141,7 +157,7 @@ html {
                         width: .25rem;
                         height: .25rem;
                         border-radius: 50%;
-                        background: $primary-white-color;
+                        background: $gray-1;
                         position: absolute;
                         top: 50%;
                         left: 50%;
@@ -154,14 +170,25 @@ html {
                     display: flex;
                     justify-content: center;
                     font-size: 1rem;
+                    box-shadow: $inner-shadow;
+                    background: $primary-white-color;
+                    border-radius: $primary-size;
                 }
             }
         }
     }
 
-    .dark {
+    .d__1 {
         background: $primary-dark-color;
         color: $primary-white-color;
+    }
+
+    .d__2 {
+
+    }
+
+    .d__3 {
+
     }
 }
 
@@ -170,9 +197,18 @@ html {
 }
 
 .pd-tb {
-    padding: $primary-size 0;
+    padding: ($primary-size / 2) 0;
+}
+
+.pd-lr {
+    padding-left: $primary-size;
+    padding-right: $primary-size;
 }
 
 .bs {
     box-sizing: border-box;
+}
+
+.bd_r {
+    border-radius: $primary-size * 2;
 }
